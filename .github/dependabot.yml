@@ -1,0 +1,19 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+       gradle-dependencies:
+          patterns:
+            - "*" # Match all dependencies to one PR.
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+       ci-dependencies:
+          patterns:
+            - "*" # Match all dependencies to one PR.
